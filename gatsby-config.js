@@ -10,7 +10,7 @@ module.exports = {
     siteLanguage: 'en',
     siteHeadline: "Mark Jackson's personal blog",
     siteUrl: "https://blog.remjx.com",
-    siteTitle: "remjx // blog",
+    siteTitle: "remjx // experiments in future building",
     siteTitleAlt: `Remjx blog`,
     siteDescription: "Mark Jackson's blog"
   },
@@ -19,12 +19,16 @@ module.exports = {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
-        blogPath: '/posts',
+        blogPath: '/blog',
         formatString: 'MM/DD/YYYY',
         navigation: [
           {
-            title: `Posts`,
-            slug: `/posts`,
+            title: `Blog`,
+            slug: `/blog`,
+          },
+          {
+            title: `Projects`,
+            slug: `/projects`,
           },
           {
             title: `About`,

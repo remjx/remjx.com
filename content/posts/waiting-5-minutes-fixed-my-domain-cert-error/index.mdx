@@ -1,0 +1,24 @@
+---
+title: Waiting 5 minutes fixed my ERR_CERT_COMMON_NAME_INVALID error
+date: 2020-06-16
+tags:
+  - Web Development
+---
+
+### TL;DR
+
+When I started up my server on a new ip address for an existing domain name with a free HTTPS certificate from [LetsEncrypt](https://letsencrypt.org/), I was getting an "ERR_CERT_COMMON_NAME_INVALID" error in Chrome. I changed my "A" record in my cPanel Zone Editor to make sure the "A" record was pointing to the right ip for the given domain name. It turns out, simply waiting 5-10 minutes resolved the issue. It looks like the A record change just needed a few minutes to be recognized.
+
+I think I could avoid this issue in the future by reserving an ip address so I wouldn't have to change the A record.
+
+### Background
+
+How I ran into this issue is probably irrelevant for most people reading this, but just for some context, or if you are curious:
+
+I am hosting this blog as a static site on Netlify's CDN, which means I don't have my own server handling requests. I am using Ghost as my CMS which sends webhook to Netlify to build and host the assets.
+
+The main benefit of doing this is I don't need to always have my own server running all the time (which saves me a whopping ~$5/mo). I can boot it up to write and publish posts, then power it down when Netlify is done processing the updates.
+
+As mentioned above, I ran into this issue because the IP of my Ghost server changed, and it can take some time for the A record change to go through.
+
+Hope this helps someone out there. Patience is a virtue :)

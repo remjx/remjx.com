@@ -1,0 +1,10 @@
+---
+title: PostgreSQL Tips & Tricks
+date: 2020-06-16
+tags:
+  - Web Development
+---
+
+[PostgreSQL](https://www.postgresql.org/) is my favorite relational open-source database. Here are some tips & tricks I have found useful:
+
+- Make sure to [kill inactive database connections](http://www.craigkerstiens.com/2017/09/18/postgres-connection-management/). I had an issue a while back where my server was not able to connect to my database. It turns out I was hitting the maximum number of connections. This post helped me identify the issue. I ended up setting the timeout to 60 seconds and this cleared up a lot of the unused connections. Many of them were old connections from my local development database management tool, [DBeaver](https://dbeaver.io/) (which is awesome by the way).

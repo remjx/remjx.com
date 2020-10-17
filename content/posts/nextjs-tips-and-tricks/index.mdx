@@ -1,0 +1,10 @@
+---
+title: Next.js Tips & Tricks
+date: 2020-05-27
+tags:
+  - Web Development
+---
+
+[Next.js](https://nextjs.org/) is my favorite framework for React apps. Here are some tips & tricks I have found useful:
+
+- [Refreshing Next.js Page Data](http://www.boduch.ca/2019/04/refreshing-nextjs-page-data.html) by Adam Boduch. Do you need to refresh page data that is initially populated via getInitialProps or getServerSideProps? This article demonstrates a pattern to solve that issue. In the component, create a state field for the value and use the prop passed from getInitialProps as the default state. Then, use useEffect or other trigger to update the state as needed in the component.

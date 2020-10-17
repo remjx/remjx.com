@@ -6,17 +6,25 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
+    author: '@markjackson02',
+    siteLanguage: 'en',
+    siteHeadline: "Mark Jackson's personal blog",
+    siteUrl: "https://blog.remjx.com",
+    siteTitle: "remjx // blog",
     siteTitleAlt: `Remjx blog`,
+    siteDescription: "Mark Jackson's blog"
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
+        blogPath: '/posts',
+        formatString: 'MM/DD/YYYY',
         navigation: [
           {
-            title: `Blog`,
-            slug: `/blog`,
+            title: `Posts`,
+            slug: `/posts`,
           },
           {
             title: `About`,
@@ -27,10 +35,6 @@ module.exports = {
           {
             name: `Twitter`,
             url: `https://twitter.com/markjackson02`,
-          },
-          {
-            name: `Instagram`,
-            url: `https://www.instagram.com/markjackson02`,
           },
         ],
       },

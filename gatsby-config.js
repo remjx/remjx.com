@@ -11,16 +11,16 @@ module.exports = {
     siteHeadline: "Mark Jackson's personal blog",
     siteUrl: "https://blog.remjx.com",
     siteTitle: "remjx // experiments in future building",
-    siteTitleAlt: `Remjx blog`,
-    siteDescription: "Mark Jackson's blog"
+    siteTitleAlt: `remjx | experiments in future building`,
+    siteDescription: "Mark Jackson's personal website"
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
-        blogPath: '/blog',
-        formatString: 'MM/DD/YYYY',
+        feedTitle: "remjx",
+        formatString: 'MMM DD YYYY',
         navigation: [
           {
             title: `Blog`,
@@ -36,6 +36,10 @@ module.exports = {
           },
         ],
         externalLinks: [
+          {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/markjackson02/'
+          },
           {
             name: `Twitter`,
             url: `https://twitter.com/markjackson02`,

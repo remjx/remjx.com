@@ -48,6 +48,10 @@ module.exports = {
             name: `Twitter`,
             url: `https://twitter.com/markjackson02`,
           },
+          {
+            name: `Github`,
+            url: `https://github.com/markjackson02`,
+          },
         ],
       },
     },

@@ -23,7 +23,7 @@ const Footer = () => {
       <div>
         <Link
           aria-label="Link to this website's source code"
-          href="https://github.com/markjackson02/remjx-blog-gatsby"
+          href="https://github.com/markjackson02/remjx.com"
         >
           Github
         </Link>

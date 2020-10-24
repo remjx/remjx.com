@@ -22,11 +22,13 @@ You can skip this section and come back to it, as Bitcoin SV works mostly under 
 
 ![Bitcoin SV Logo](./bitcoin-sv-logo.jpg)
 
-Bitcoin SV is a [hard fork](https://www.investopedia.com/terms/h/hard-fork.asp) of [Bitcoin](https://bitcoin.org/bitcoin.pdf) whose primary differentiator is its unlimited block size. Whereas Bitcoin (BTC) and Bitcoin Cash (BCH) have fixed block size limits (1MB and 32MB respectively), Bitcoin SV (BSV) removes the limit entirely, leaving the decision to individual miners. This enables low-fee microtransactions and makes it practical to host data on-chain, as we shall see below when we learn how Twetch works.
+Bitcoin SV is a [hard fork](https://www.investopedia.com/terms/h/hard-fork.asp) of [Bitcoin](https://bitcoin.org/bitcoin.pdf) whose primary differentiator is its unlimited block size. Whereas Bitcoin (BTC) and Bitcoin Cash (BCH) have fixed block size limits (1MB and 32MB respectively), Bitcoin SV (BSV) removes the limit entirely, leaving the decision to individual miners. This enables low-fee microtransactions and makes it practical to host data on-chain, as we shall see when we learn how Twetch works.
 
-The existence of these different forks (versions) of Bitcoin was essentially the result of digital civil wars between factions of bitcoin users who disagreed on what the protocol rules should be.
+The other main differentiator is the Bitcoin SV development team's commitment to creating a fixed, stable, base-layer protocol that is "set in stone". Rather than continually adding new features, Bitcoin SV aims for an unchanging, reliable protocol  which has been proven to cause adoption issues in system maintenance.
 
-> My opinion: all forks of Bitcoin are Bitcoin and it is wise to keep ownership parity across all Bitcoin forks (BTC, BCH, BSV). Nobody knows for sure which will succeed or fail. It is possible they all succeed, gaining adoption & value over time, but being used for different purposes by different groups of people. I see BTC as digital gold, BCH as digital cash with a focus on retail adoption, and BSV as digital cash with a focus on digital enterprises with on-chain data.
+The existence of these different forks, or versions, of Bitcoin was essentially the result of digital civil wars between factions of bitcoin users who disagreed on what the protocol rules should be.
+
+> My opinion: all forks of Bitcoin are Bitcoin and it is wise to keep ownership parity across all Bitcoin forks (BTC, BCH, BSV). Nobody knows for sure which will succeed or fail. It is possible they all succeed, gaining adoption & value over time, but being used for different purposes by different groups of people. I see BTC as digital gold, BCH as digital cash with a focus on retail adoption, and BSV as digital cash with a focus on enterprise adoption.
 
 ## How is Twetch different from Twitter?
 
@@ -34,7 +36,7 @@ The existence of these different forks (versions) of Bitcoin was essentially the
 
 Every user interaction on Twetch is a BSV transaction under the hood. This means everything is public, timestamped, and immutable. Posts cannot be altered or deleted, so be careful!
 
-In this decentralized model where user data exists on a public blockchain, an interesting property exists: the data layer and the app layer are totally separate. The app simply provides a private viewing window and interaction capabilities with the public data. Unlike Twitter, where only Twitter has an up-to-date copy of all its user data, Twetch pulls its user data from the public blockchain.
+In this decentralized model where user data exists on a public blockchain, the data layer and the app layer are totally separate. The app simply provides a private viewing window and interaction capabilities with the public data. Unlike Twitter, where only Twitter has an up-to-date copy of all its user data, Twetch pulls its user data from the public blockchain.
 
 This separation of data from application encourages competition and reduces the monopolistic network effects existent in current social media establishments. If Twetch implements a policy its users don't like (e.g. censoring posts, banning users), the user data is still publicly available. This means anyone can create a fork (a new version of Twetch) that leverages all the public data without implementing those disagreeable business policies. Under the current centralized models of Twitter and Facebook, if you don't like what they are doing with user data, your only option is to leave.
 

@@ -19,12 +19,17 @@ module.exports = {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
+        blogPath: '/posts',
         feedTitle: "remjx",
         formatString: 'MMM DD YYYY',
         navigation: [
           {
-            title: `Blog`,
-            slug: `/blog`,
+            title: `Posts`,
+            slug: `/posts`,
+          },
+          {
+            title: `Tags`,
+            slug: `/tags`,
           },
           {
             title: `Projects`,
@@ -65,9 +70,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `blog | remjx`,
-        short_name: `remjx blog`,
-        description: `Remjx blog`,
+        name: `remjx`,
+        short_name: `remjx`,
+        description: `Mark Jackson's personal website`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#6B46C1`,

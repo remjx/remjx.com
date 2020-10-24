@@ -12,37 +12,39 @@ import links from '../../../src/config/links.json'
 
 ## What is Twetch?
 
-[Twetch](https://twetch.app) is a decentralized social media platform built on Bitcoin SV. Launched in 2019, Twetch looks and feels just like Twitter, with some important differences that make it a compelling alternative.
+[Twetch](https://twetch.app) is a decentralized social media network built on Bitcoin SV. Launched in 2019, Twetch looks and feels just like Twitter, with some important differences that make it a compelling alternative. The killer feature? **You earn money any time someone interacts with your content**.
 
 ## What is Bitcoin SV?
+
+You can skip this section and come back to it, as Bitcoin SV works mostly under the hood, but it's good background information to be aware of.
 
 [Bitcoin SV](https://bitcoinsv.io/) (BSV) is the blockchain and currency used by Twetch.
 
 ![Bitcoin SV Logo](./bitcoin-sv-logo.jpg)
 
-Bitcoin SV is a [hard fork](https://www.investopedia.com/terms/h/hard-fork.asp) of [Bitcoin](https://bitcoin.org/bitcoin.pdf) whose primary differentiator is an unlimited block size. Whereas Bitcoin (BTC) and Bitcoin Cash (BCH) have fixed block size limits (1MB and 32MB respectively), Bitcoin SV (BSV) removes the limit entirely, leaving the decision to individual miners. This enables low-fee microtransactions and makes it practical to host data on-chain, as we shall see below when we learn how Twetch works.
+Bitcoin SV is a [hard fork](https://www.investopedia.com/terms/h/hard-fork.asp) of [Bitcoin](https://bitcoin.org/bitcoin.pdf) whose primary differentiator is its unlimited block size. Whereas Bitcoin (BTC) and Bitcoin Cash (BCH) have fixed block size limits (1MB and 32MB respectively), Bitcoin SV (BSV) removes the limit entirely, leaving the decision to individual miners. This enables low-fee microtransactions and makes it practical to host data on-chain, as we shall see below when we learn how Twetch works.
 
-The existence of different forks (versions) of Bitcoin is the result of civil wars between factions of bitcoin users who disagree on what the protocol rules should be.
+The existence of these different forks (versions) of Bitcoin was essentially the result of digital civil wars between factions of bitcoin users who disagreed on what the protocol rules should be.
 
-In my opinion, all forks of bitcoin are bitcoin and it is wise to keep ownership parity across all bitcoin forks (BTC, BCH, BSV). Nobody knows for sure which will succeed or fail. It is possible they all succeed, gaining adoption & value over time, just being used for different purposes by different groups of people. BTC is branded as digital gold, BCH is branded as digital cash with a focus on retail adoption, and BSV is branded as digital cash with a focus on supporting digital enterprises with on-chain data.
+> My opinion: all forks of Bitcoin are Bitcoin and it is wise to keep ownership parity across all Bitcoin forks (BTC, BCH, BSV). Nobody knows for sure which will succeed or fail. It is possible they all succeed, gaining adoption & value over time, but being used for different purposes by different groups of people. I see BTC as digital gold, BCH as digital cash with a focus on retail adoption, and BSV as digital cash with a focus on digital enterprises with on-chain data.
 
 ## How is Twetch different from Twitter?
 
 ### Posts live forever on the blockchain
 
-For every user interaction on Twetch, a BSV transaction is created under the hood. This means all interactions are public, timestamped, and immutable (meaning they cannot be altered or deleted).
+Every user interaction on Twetch is a BSV transaction under the hood. This means everything is public, timestamped, and immutable. Posts cannot be altered or deleted, so be careful!
 
-From a user perspective, it looks like you're transacting in dollars and cents (or whatever your local currency is). In other words, it uses the exchange rate to display amounts in your local currency to make it more intuitive.
+In this decentralized model where user data exists on a public blockchain, an interesting property exists: the data layer and the app layer are totally separate. The app simply provides a private viewing window and interaction capabilities with the public data. Unlike Twitter, where only Twitter has an up-to-date copy of all its user data, Twetch pulls its user data from the public blockchain.
 
-In this decentralized model where user data exists on a public blockchain, an interesting property exists: the data layer and the app layer are separate. The app is simply a private viewing window into the public data. Unlike Twitter, where only Twitter has an up-to-date copy of all its user data, Twetch pulls its user data from the public blockchain.
-
-This separation encourages competiton and reduces the monopolistic network effects existent in current social media establishments. If Twetch implements a policy its users don't like (e.g. censoring posts, banning users), the user data is still publicly available. This means anyone can create a fork (a new version of Twetch) that leverages all the public data without implementing those disagreeable business policies. Under the current centralized models of Twitter and Facebook, if you don't like what they are doing with user data, your only option is to leave.
+This separation of data from application encourages competition and reduces the monopolistic network effects existent in current social media establishments. If Twetch implements a policy its users don't like (e.g. censoring posts, banning users), the user data is still publicly available. This means anyone can create a fork (a new version of Twetch) that leverages all the public data without implementing those disagreeable business policies. Under the current centralized models of Twitter and Facebook, if you don't like what they are doing with user data, your only option is to leave.
 
 > Note: Not _all_ your Twetch data exists on the blockchain. For example your profile photo only exists on their servers. The benefit of this is you can change it for free without incurring any cost. The downside is the same as the centralized model: it lacks data portability. Hopefully this is only temporary.
 
 ### Pay-to-post and earn money when users engage with your content
 
 Posting on Twetch is not free because you are creating a Bitcoin transaction under the hood, and to prevent spam, miners require a small fee to process a transaction. On BSV, these fees are small and practically negligible (a small fraction of a cent).
+
+From a user perspective, although you're transacting in BSV, it _looks_ like you're transacting in dollars and cents (or whatever your local currency is). The user interface uses the exchange rate to display BSV amounts in your local currency to make it more intuitive.
 
 On the upside, you have the opportunity to earn profit from each post. Any time another user interacts with your content, you earn a commission.
 
@@ -55,14 +57,6 @@ On the upside, you have the opportunity to earn profit from each post. Any time 
 Twetch earns a small (~10%) commission on the user-to-user interactions, while the other 90% goes to the user.
 
 [Insert chart of current fees by action]
-
-### Encrypted chat
-
-- It has an encrypted chat feature so 
-
-(insert table comparison of Twetch vs Twitter)
-
-Since all posts are public on the blockchain, the Twetch app itself is just a "window" into the blockchain and has some additional functionalities built on top of the "base layer" of public posts.
 
 Some members of the Twetch team are intentional trolls. They threaten to ban people from the platform. They post memes. They taunt Jack Dorsey of Twitter. But there is a subtle signal they are sending by doing this sort of thing. Even if you develop a distaste for them, or don't trust them, the beauty is that you can fork their project at any time by leveraging the data that is on the blockchain. In other words, if the Twetch community decided that the Twetch founders were being toxic, nobody can stop you from creating your own version of Twetch that doesn't engage in these types of toxic practices. In other words, Twetch is anti-fragile because unlike Twitter, all the data is public.
 
@@ -77,11 +71,22 @@ This means there is a little "street cred" bonus for early adopters who have a l
 Your permanent username is incremental based on the number of Twetch users that existed before you signed up. I'm @4652 which means I was the 4,652nd person to sign up.
 - Although your u/ name is permanent, you can set a display name just like Twitter
 
+### Trigger /actions in posts
+
+- Type "/pay @user $amount" to pay a user directly from your BSV wallet
+- Type "/trolltoll @user $amount" to prevent a user from interacting with you unless they pay the "troll toll". Type "/trolltoll remove @user" to remove it.
+
+### Encrypted direct messages
+
+Chat privately "fren2fren" with encrypted messaging. There is a one-time fee of $9.99 to unlock the ability to initiate chats, but after that there are no limits on number of chats or number of messages within a chat. If someone else initiates the chat, it's free. 
+
+Check out [this article](https://www.zdnet.com/article/blockchain-based-twitter-competitor-twetch-releases-encrypted-chat-app/) for more information how it works at a technical level.
+
 ## Developer API
 
 Developers can use the official [twetch-js](https://github.com/twetch-inc/twetch-js) package to create interactions programmatically.
 
-The most interesting application I've found so far is [Windbell](https://windbell.app/) which allows you to convert any Twitter public profile into a Twetch bot that copies all the user's tweets to Twetch. Anybody can contribute money to the Windbell to keep it up and running (since it costs 2 cents to post a Twetch). And a cool bonus is that the creator of the Windbell earns money on any interactions with it.
+[Windbell](https://windbell.app/) is an app utilizing the API which allows you to convert any Twitter public profile into a Twetch bot. Simply select the Twitter @username, pay $2.18 to initialize the bot, and those funds will be used to create new Twetch posts any time that Twitter user posts a new tweet. Anybody can contribute money to the Windbell fund to keep the bot up and running (since it costs 2 cents to post on Twetch). And a cool bonus is that the creator of the Windbell earns money on any interactions with the bot. Here is an example Windbell I created: [Tim Ferriss Bot](https://twetch.app/u/17108). 
 
 ## How to sign up
 
@@ -92,11 +97,11 @@ Signing up is pretty straightforward using the invite link. It's basically a two
 2. Accept your invite and link your Twetch account to your wallet account
 3. (Optional) Follow me! I'm [@4652](https://twetch.app/u/4652) on Twetch.
 
-## Memes
+## How shuould I use Twetch? 
 
-The Twetch and BSV community are relatively small right now, so a lot of the memes being posted are Bitcoin related. Here are some to be on the lookout for:
-
-- Craig Wright 
+- Use it just like Twitter. But be careful what you post since all your posts will live on the blockchain forever.
+- Post memes. Josh Petty, the CEO of Twetch, said his team likes to think of Twetch as a "marketplace for memes"[^marketplace-for-memes].
+- Build a following any way you can.
 
 ## Meet The Founders
 
@@ -104,6 +109,10 @@ Twetch is operated by a dissident team of Bitcoin SV enthusiasts. Headed by Josh
 
 Some of the early team members include:
 
-#### Sources
+- @1
+- @2
+- 
 
-- [Yahoo, "Twetch Launches Encrypted Messaging, In-Chat Payments on BSV Blockchain" (09/09/2020)](https://sports.yahoo.com/twetch-launches-encrypted-messaging-chat-194529537.html)
+#### References
+
+[^marketplace-for-memes]: [Modern Consensus, "Twetch CEO “Elon Moist” says the internet will pay you to use social media"](https://modernconsensus.com/people/twetch-ceo-elon-moist-says-the-internet-will-pay-you-to-use-social-media/)

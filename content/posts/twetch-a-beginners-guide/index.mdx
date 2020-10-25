@@ -16,15 +16,13 @@ import links from '../../../src/config/links.json'
 
 <h2 id="what-is-bitcoin-sv">What is Bitcoin SV?</h2>
 
-Bitcoin SV works under the hood and is mostly invisible to the user. However, Twetch will make more sense if you understand it within the context of Bitcoin.
-
-[Bitcoin SV (BSV)](https://bitcoinsv.io/) is the blockchain and currency used by Twetch.
+[Bitcoin SV (BSV)](https://bitcoinsv.io/) is the [blockchain](https://en.wikipedia.org/wiki/Blockchain) and currency used by Twetch. It works under the hood and is mostly invisible to the user.
 
 ![Bitcoin SV Logo](./bitcoin-sv-logo.jpg)
 
-Bitcoin SV is a [version](https://www.investopedia.com/terms/h/hard-fork.asp) of [Bitcoin](https://bitcoin.org/bitcoin.pdf) whose primary differentiator is its unlimited block size. Whereas Bitcoin (BTC) and Bitcoin Cash (BCH) have fixed block size limits (1MB and 32MB respectively), Bitcoin SV (BSV) removes the limit entirely. With big blocks, it is possible for users to make low-fee "microtransactions" for fractions of a cent and host data on-chain.
+The important thing to know is that Bitcoin SV is a [version](https://www.investopedia.com/terms/h/hard-fork.asp) of [Bitcoin](https://bitcoin.org/bitcoin.pdf) whose primary differentiator is its unlimited block size. Whereas Bitcoin (BTC) and Bitcoin Cash (BCH) have fixed block size limits (1MB and 32MB respectively), Bitcoin SV (BSV) removes the limit entirely. With big blocks, it is possible for users to make low-fee microtransactions (fractions of a cent) and host data on-chain.
 
-Twetch utilizes many of Bitcoin SV's capabilities as we shall see.
+Twetch utilizes these capabilities of Bitcoin SV's as we shall see.
 
 ## Twetch vs. Twitter: What's the difference?
 
@@ -33,12 +31,12 @@ What's wrong with Twitter? Is [@jack](https://twitter.com/jack) evil? Why use Tw
 
 ### Posts live forever on the blockchain ♾️
 
-Every user interaction on Twetch is a BSV transaction under the hood. This means every post is public, timestamped, and immutable.
+Every user interaction on Twetch is a BSV transaction under the hood. This means every Post, Like, and Reply is public, timestamped, and immutable.
 
 For example, [this is the Bitcoin transaction](https://search.matterpool.io/tx/11b05d8ca4f5b1084ede31c2b8f9e4d1c0d493f0d16c45051aec9d072f50a1dd) that represents this Twetch post:
 ![Twetch post example](./twetch-post-example.PNG)
 
-In this decentralized model where user data exists on a public blockchain, the data layer and the app layer are separate. The app simply provides a private viewing window into the public data and ways to interact with it. Whereas Twitter is the only party who has an up-to-date copy of all its user's data, Twetch pulls all its user's data from the public blockchain.
+In this decentralized model where user data exists on a public blockchain, the data layer and the app layer are separate. The app simply provides a viewing window into the public data and ways to interact with it. Whereas Twitter is the only party with an up-to-date copy of all its user's data, Twetch pulls all its user's data from the public blockchain.
 
 This independence of data increases competition and transparency while reducing monopolistic network effects. If Twetch implements a policy its users don't like (e.g. censoring posts, banning users), the user data is still publicly available. Anyone can leverage the public data and create their own version of Twetch that doesn't implement those disagreeable business policies. Under the current centralized models of Twitter and Facebook, if you don't like their policies, your only option is to leave.
 
@@ -47,7 +45,7 @@ This independence of data increases competition and transparency while reducing 
 
 Twetch has a built-in economic system based on microtransactions.
 
-Interaction fees have gotten lower as the userbase has increased, but as it stands today:
+As it stands today:
 
 <ul style="list-style-type:none">
     <li>➕ Creating a post costs 2¢</li>
@@ -56,11 +54,13 @@ Interaction fees have gotten lower as the userbase has increased, but as it stan
     <li>👀 Following a user costs 10¢</li>
 </ul>
 
-A tiny fraction of these costs go to the Bitcoin miners, ~10% goes to Twetch, and the other ~90% goes directly to the user you are interacting with.
+A tiny fraction of these costs go to the Bitcoin miners, ~10% goes to Twetch, and the other ~90% goes to the user you are interacting with. Because the interactions are transactions are on Bitcoin, payouts are instant.
 
 If you get 10 Likes on a post, you'll earn ~$1! If you get 100 Likes, you'll earn ~$10! Scale up or down as necessary based on your popularity and meme abilities 😉
 
-And it goes further! If Person A branches to your post, and Person B interacts with the branch, you split the earnings from Person B's interaction with Person A.
+And it goes further. If Person A branches to your post, and Person B interacts with the branch, you split the earnings from Person B's interaction with Person A.
+
+> Note: interaction fees are set by Twetch and have lowered as the userbase has increased. I expect them to continue tweaking the incentive structure, but I don't expect any drastic changes.
 
 ### No ads 🚫
 
@@ -86,11 +86,11 @@ In short, there's no catch, but the ecosystem is not as developed as Twitter's.
 
 ## What's the verdict?
 
-My humble opinion is that Twitter users should not expect to ditch the platform anytime soon. The community is much larger and diverse on Twitter and I don't think that will change anytime soon. There are some people that don't want to pay to post, and circumstances where you don't want a post to exist immutably on the blockchain.
+My humble opinion is that Twitter users should not expect to ditch it anytime soon. The community is much larger and diverse. There are people who don't want to pay to post. There are circumstances where you don't want a post to exist immutably on the blockchain. I don't see these things changing any time soon.
 
 On the flipside, Twetch provides some utility that Twitter does not. Making money off each interaction is an innovative concept with a definite future in certain applications. It really comes down to utilizing each platform for its unique communities and capabilities.
 
-If Twetch sounds interesting to you, hang out on Twetch for a bit and see if you like the community. Try to earn some money from your followers. Get indoctrinated by the memes.
+If Twetch sounds interesting to you, try it out for a bit and see if you like the community. Try to earn some money from your followers. Get indoctrinated by the memes:
 
 ![Happy monkey after receiving 4 cents](./confused-chan-orange-meme.PNG)
 
@@ -119,12 +119,12 @@ Here are a few of my favorites:
 - [@931 T.K. Coleman](https://twetch.app/u/931)
 - [@4179 Steve Patterson](https://twetch.app/u/4179)
 
-User numbers are fixed, but you can change your display name at any time.
+> User numbers are fixed, but you can change your display name at any time.
 
 ### Use /commands to trigger actions in posts
 
-- Post `/pay @user $amount` to pay a user directly from your BSV wallet
-- Post `/trolltoll @user $amount` to prevent a user from interacting with you unless they pay the troll toll. `/trolltoll remove @user` removes it.
+- `/pay @user $amount` to pay a user directly from your BSV wallet
+- `/trolltoll @user $amount` to prevent a user from interacting with you unless they pay the troll toll. `/trolltoll remove @user` to remove it.
 
 ### Write any Twitter post to the BSV blockchain
 

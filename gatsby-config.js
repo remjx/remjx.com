@@ -75,7 +75,7 @@ module.exports = {
         description: `Mark Jackson's personal website`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#6B46C1`,
+        theme_color: `#0345fc`,
         display: `standalone`,
         icons: [
           {

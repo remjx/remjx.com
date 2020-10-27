@@ -1,7 +1,10 @@
 ---
-title: How to fix thermal and battery life issues on Zephyrus G14 and G15
+title: How to fix thermal and battery life issues on ASUS Zephyrus G14 and G15
 date: 2020-05-20
 ---
+
+import { myTwitterUrl } from '../../../src/config/links.json'
+
 I am loving my new ASUS ROG Zephyrus G15 (GA502IV) laptop, but it didn't start out that way.
 
 **Heat, fan noise, and battery life were serious problems that I had out-of-the-box with this laptop.** My CPU idle temperature started out around 170°F/77°C on the Armoury Crate "Performance" setting with just basic apps open.
@@ -12,14 +15,14 @@ I believe all these steps should work with the G14 except where stated otherwise
 
 Let's get started!
 
-### Software Updates
+## Software Updates
 First, be sure to update all the preinstalled software. Windows Update, Microsoft Store apps, graphics drivers (via Nvidia GeForce Experience app), etc.
 
-### Remove Problematic Software
+## Remove Problematic Software
 - **GameFirst**. This is supposed to help prioritize network traffic when playing games, but reviewers have said it doesn’t have much of an effect.
 - **Apps waking the GPU from sleep unnecessarily**. Go into Nvidia Control Panel and in the toolbar select Desktop > "Display GPU Activity Icon in Notification Area". Then in your bottom right Windows toolbar click the icon and it will tell you what programs are utilizing the GPU. Monitor this and remove any programs that are unnecessarily waking up the GPU. Unless you are actively using the GPU, Armoury Crate should show the GPU in "Power Saving" mode. For me, the problematic software was Radeon Settings Lite (which I uninstalled but you can also apparently just put on power save) and yourphone.exe which is a built-in Microsoft app which I turned off via Windows Settings > Background Apps. Disabling these apps dropped my core CPU/GPU temps by 15°C. Now my fans don’t even turn on when I’m using basic apps.
 
-### Disable CPU Boost on default power profile
+## Disable CPU Boost on default power profile
 Until you absolutely need it for a specific application. This dropped my core CPU temp by 10°C.
 
 > “Using Registry Editor, go to HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Contro l\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\be337238-0d82-4146-a960-4f3749d470c7 and select Attributes. Modify the value of "Attributes" from 1 to 2. Data should read “0x00000002 (2)”. This will uncover a hidden power option.
@@ -28,7 +31,7 @@ Until you absolutely need it for a specific application. This dropped my core CP
 
 > For a general idea about the performance compared to 99% max state, average FPS went up to about 5-15 with the temperatures still maxing out at the same 75 degree Celsius! The FPS loss from 99% disabled has been recovered while maintaining the benefit! Tiering your games at 1.7GHz, 3.0GHz, and full boosting will allow greater flexible for performance and temperature.”
 
-#### A note on Windows power profiles, Armoury Crate presets, and CPU Boost
+### A note on Windows power profiles, Armoury Crate presets, and CPU Boost
 Keep in mind the Boost Mode option above is set at the Windows Power Plan level, so you might need to change it on multiple power plans however you decide to set them up. When you change Armoury Crate presets (Silent, Performance, Turbo), you are changing the Windows Power Plan under the hood.
 
 - Armoury Crate Silent => Windows Balanced
@@ -36,10 +39,10 @@ Keep in mind the Boost Mode option above is set at the Windows Power Plan level,
 - Armoury Crate Turbo => Windows High Performance
 If you want to automate the Boost, you can install [Power Plan Manager](https://hamilton-engineering.com/html/ppm-info.html) to automatically switch power plans when you open specific apps.
 
-### Drop the screen refresh rate
+## Drop the screen refresh rate
 The G15 default is 240Hz which is good for gaming, but [you can reduce it](https://www.howtogeek.com/267650/how-to-make-your-120hz-or-144hz-monitor-use-its-advertised-refresh-rate) to 60Hz whenever you're not gaming to save battery life.
 
-### Bottom fan vent surgery (G15 only)
+## Bottom fan vent surgery (G15 only)
 I haven't tried this myself yet, and beware: it will void your warranty if you do. However those who have done it say it drops CPU/GPU temps by 5-10°C: [remove the vent covers](https://www.reddit.com/r/ZephyrusG14/comments/g7kd5b/asus_rog_zephyrus_240_hz_g15_2020_open_vent/) that ASUS (in an odd engineering decision) blocked with plastic papers.
 
 ASUS says it improves airflow to other parts of the system, but many people (myself included) are skeptical about that claim. Most other components don’t have temperature sensors so it is difficult to prove this, but the consensus logic is that since the CPU/GPU are the highest heat-generating components, reducing their temperatures should reduce temperatures throughout the rest of the machine. [This comment](https://www.reddit.com/r/ZephyrusG14/comments/g7kd5b/asus_rog_zephyrus_240_hz_g15_2020_open_vent/fojlg6n/) goes into detail on how to do it if you want to give it a try.
@@ -49,12 +52,12 @@ To avoid voiding your warranty, you can purchase an extra bottom cover for about
 Update drivers, of course
 Try updating to the [latest drivers](https://www.asus.com/me-en/Laptops/ROG-Zephyrus-G15/HelpDesk_Download/) if you are still having issues. I am including this step last because I didn't need to do it. The rest of the above steps fixed my issues. BIOS is probably the biggest one you'll want to update, but mine came with the latest BIOS preinstalled. To check you are on the latest BIOS version, compare the version listed on the ASUS site with Windows > System Information > System Summary > BIOS Version/Date.
 
-### Confirm that all is well now
+## Confirm that all is well now
 Install [Battery Bar](https://batterybarpro.com/) (free version available) to monitor your power consumption.
 
 As a frame of reference, at lowest brightness with no serious programs open, my G15 with 240Hz display has a Discharge Rate of 9-13W. A G14 user reported about 7W.
 
-### Sources
+## Sources
 I found all these tips & tricks on Reddit and decided to compile them here.
 
 - Subreddits: [r/ZephyrusG14](https://www.reddit.com/r/ZephyrusG14/), [r/ZephyrusG15](https://www.reddit.com/r/ZephyrusG15/)
@@ -63,4 +66,10 @@ I found all these tips & tricks on Reddit and decided to compile them here.
 - [Radeon Settings Lite is fine! Use Windows Graphics Options to force it to run on integrated!](https://www.reddit.com/r/ZephyrusG14/comments/gld3lj/radeon_settings_lite_is_fine_use_windows_graphics/) by [u/onesadcyclist](https://www.reddit.com/user/onesadcyclist/)
 - I couldn't find the original thread regarding the Nvidia Control Panel, but shout out to that thread as well, wherever it is...
 
-Thanks to all the Redditors who cracked this case. We can now be peace with our Zephyri.
+Thanks to all the Redditors who cracked this case. We can now be peace with our Zephyri. 🙏
+
+## Corrections
+
+If you have any questions, post a comment on [this Reddit thread](https://www.reddit.com/r/ZephyrusG15/comments/gnot0f/new_owners_how_to_fix_thermal_fan_noise_battery/).
+
+If something is out of date, reach out to me on <a href={myTwitterUrl}>Twitter</a>.

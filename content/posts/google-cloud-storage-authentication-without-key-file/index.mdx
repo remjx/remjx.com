@@ -1,0 +1,47 @@
+---
+title: Google Cloud Storage authentication without key file in Node.js
+date: 2020-11-13
+tags:
+    - Troubleshooting
+    - Web Development
+---
+
+Google has instructions on how to [authenticate with a service account](https://cloud.google.com/docs/authentication/production), but the current documentation only explains how to do it with a key file. Is there any way to authenticate using the more familiar method of using project environment variables? Yes!
+
+## The recommended way to authenticate
+
+The Google Cloud docs recommend [downloading your service account key as a JSON file](https://cloud.google.com/docs/authentication/production#create_service_account) and either setting the file path in a system-level environment variable or passing the filename into the instantiation of the Google Cloud class you are using. 
+
+However rather than assuming a key file will exist in some location on the server, I think it is a cleaner solution to set the credentials as environment variables and explicitly reference them in the code.
+
+Not to mention I couldn't get this "recommended" method to work 🙄. I was getting the following errors:
+
+```
+ERROR: Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+```
+
+## The alternative way to authenticate 
+
+Thankfully the alternative is quite simple (although not well documented):
+
+Open the service account JSON credentials file and grab the following: `project_id`, `client_id`, `client_email`, and `private_key`.
+
+Set them as project environment variables (I'm using Next.js's [.env.local](https://nextjs.org/docs/basic-features/environment-variables) file), and instantiate the Storage class as follows:
+
+```
+const {Storage} = require('@google-cloud/storage');
+const storage = new Storage({
+    projectId: project_id
+    credentials: {
+        client_id,
+        client_email,
+        private_key,
+    }
+});
+```
+
+Note that `projectId` is the only field name that is camelCase.
+
+I tested it with the [getBuckets](https://googleapis.dev/nodejs/storage/latest/Storage.html#getBuckets) example, and voila! Successful API call 🎉.
+
+Tested with `Node.js 14.15.0` and `@google-cloud/storage@5.5.0`.

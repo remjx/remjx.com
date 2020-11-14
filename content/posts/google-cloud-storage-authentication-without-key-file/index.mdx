@@ -24,7 +24,7 @@ ERROR: Error: Could not load the default credentials. Browse to https://cloud.go
 
 Thankfully the alternative is quite simple (although not well documented):
 
-Open the service account JSON credentials file and grab the following: `project_id`, `client_id`, `client_email`, and `private_key`.
+Open the service account JSON credentials file and grab the following: `project_id`, `client_email`, and `private_key`.
 
 Set them as project environment variables (I'm using Next.js's [.env.local](https://nextjs.org/docs/basic-features/environment-variables) file), and instantiate the Storage class as follows:
 
@@ -33,7 +33,6 @@ const {Storage} = require('@google-cloud/storage');
 const storage = new Storage({
     projectId: project_id
     credentials: {
-        client_id,
         client_email,
         private_key,
     }

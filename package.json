@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "remjx-blog",
-  "description": "Mark Jackson's personal blog",
+  "name": "remjx.com",
+  "description": "Mark David Jackson's personal website",
   "version": "0.0.1",
   "author": "Mark Jackson <markjackson02@gmail.com>",
   "starter-name": "gatsby-starter-minimal-blog",

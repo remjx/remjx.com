@@ -10,8 +10,8 @@ module.exports = {
     siteLanguage: 'en',
     siteHeadline: "Mark Jackson's personal blog",
     siteUrl: "https://blog.remjx.com",
-    siteTitle: "remjx // experiments in future building",
-    siteTitleAlt: `remjx | experiments in future building`,
+    siteTitle: "remjx",
+    siteTitleAlt: `remjx`,
     siteDescription: "Mark Jackson's personal website"
   },
   plugins: [

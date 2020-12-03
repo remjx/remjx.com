@@ -51,7 +51,7 @@ module.exports = {
           },
           {
             name: `Twitter`,
-            url: `https://twitter.com/markjackson02`,
+            url: `https://twitter.com/remjxd`,
           },
           {
             name: `Github`,

@@ -55,7 +55,7 @@ module.exports = {
           },
           {
             name: `Github`,
-            url: `https://github.com/markjackson02`,
+            url: `https://github.com/remjx`,
           },
         ],
       },

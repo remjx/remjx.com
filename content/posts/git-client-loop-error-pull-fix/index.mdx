@@ -1,0 +1,26 @@
+---
+title: 'How to fix Git error "client_loop: send disconnect: Connection reset by peer"'
+date: 2020-12-21
+tags:
+  - Git
+---
+
+When I tried to push my git branch to remote, I was getting this error:
+
+```
+$     git push --set-upstream origin my-branch
+Enumerating objects: 845, done.
+Counting objects: 100% (845/845), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (725/725), done.
+Writing objects: 100% (771/771), 1.20 MiB | 2.22 MiB/s, done.
+Total 771 (delta 442), reused 0 (delta 0), pack-reused 0
+client_loop: send disconnect: Connection reset by peer
+fatal: the remote end hung up unexpectedly
+```
+
+It looks like a connection issue, but that was not the case at all.
+
+The fix was simple: do a `git pull` to merge changes with remote. Then push again.
+
+That was easy.

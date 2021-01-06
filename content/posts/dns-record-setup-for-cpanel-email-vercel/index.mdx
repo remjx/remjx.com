@@ -1,0 +1,29 @@
+---
+title: 'How to setup cPanel Email on Vercel (or any other DNS host)'
+date: 2021-01-06
+tags:
+  - Web Development
+---
+
+Let's assume you have a cPanel account and want to use cPanel Email but your website is hosted on a different server.
+
+For example, my website [Coindrop](https://coindrop.to) is hosted on [Vercel](https://vercel.com/) but Vercel does not provide email hosting. I don't want to pay for separate e-mail hosting since I already have an underutilized [Namecheap Hosting](https://www.namecheap.com/hosting/) server running on cPanel.
+
+## Setting it up is simple:
+
+In cPanel,
+- Home > Domains > Addon Domains. Create an addon domain for your domain (e.g. your-website.com).
+- Home > Email > Email Accounts. Create an email account for the domain you just added (e.g. admin@your-website.com).
+- Home > Sidebar. Note the IP Address of the cPanel account.
+
+On your server, add the following DNS records. In Vercel, this can be found at Dashboard > Domains > your-website.com > DNS Records.
+- NAME="", TYPE="MX", VALUE="webmail.your-website.com"
+- NAME="", TYPE="MX", VALUE="mail.your-website.com"
+- NAME="webmail", TYPE="A", VALUE="[your cPanel IP]"
+- NAME="mail", TYPE="A", VALUE="[your cPanel IP]"
+
+## Test it out
+
+I like to use [Thunderbird](https://www.thunderbird.net/en-US/) as my e-mail client but cPanel also has built-in e-mail clients you can test it with if you go to cPanel > Email Accounts > admin@yourwebsite.com > Check Email. If you're using Thunderbird, go to Menu > Add New > Existing Email Account. Accept any security certificates during the login process.
+
+Test it out by sending an email to admin@your-website.com.

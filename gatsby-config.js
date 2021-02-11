@@ -36,26 +36,14 @@ module.exports = {
             slug: `/projects`,
           },
           {
-            title: `Kit`,
-            slug: `/kit`,
-          },
-          {
             title: `About`,
             slug: `/about`,
           },
         ],
         externalLinks: [
           {
-            name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/markjackson02/'
-          },
-          {
             name: `Twitter`,
             url: `https://twitter.com/remjxd`,
-          },
-          {
-            name: `Github`,
-            url: `https://github.com/remjx`,
           },
         ],
       },

@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, Link } from "theme-ui";
+import { FaGithub } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -25,7 +26,7 @@ const Footer = () => {
           aria-label="Link to this website's source code"
           href="https://github.com/remjx/remjx.com"
         >
-          Github
+          <FaGithub size="24px" />
         </Link>
       </div>
     </footer>

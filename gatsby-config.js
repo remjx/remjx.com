@@ -28,10 +28,6 @@ module.exports = {
             slug: `/posts`,
           },
           {
-            title: `Tags`,
-            slug: `/tags`,
-          },
-          {
             title: `Projects`,
             slug: `/projects`,
           },

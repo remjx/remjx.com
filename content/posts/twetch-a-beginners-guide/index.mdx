@@ -1,6 +1,8 @@
 ---
 title: "A Beginner's Guide to Twetch: Bitcoin's Twitter clone"
-date: 2020-10-25
+date: 2021-04-16
+last-updated: 2021-04-16
+publish-date: 2020-10-25
 tags:
   - Bitcoin
 banner: ./twetch-banner.jpg
@@ -40,7 +42,6 @@ In this decentralized model where user data exists on a public blockchain, the d
 
 This independence of data increases competition and transparency while reducing monopolistic network effects. If Twetch implements a policy its users don't like (e.g. censoring posts, banning users), the user data is still publicly available. Anyone can leverage the public data and create their own version of Twetch that doesn't implement those disagreeable business policies. Under the current centralized models of Twitter and Facebook, if you don't like their policies, your only option is to leave.
 
-
 ### Pay-to-interact and earn money when users engage with your content 🤑
 
 Twetch has a built-in economic system based on microtransactions.
@@ -70,31 +71,34 @@ There are no advertisements on Twetch. As mentioned above, Twetch earns a small 
 
 ### Encrypted chat 💬
 
-Chat privately fren2fren™ with end-to-end encrypted messaging. There is a one-time fee of $9.99 to unlock this feature, although if someone else initiates the chat, it's free. There are no limits on number of chats or number of messages within a chat. [Click here](https://www.zdnet.com/article/blockchain-based-twitter-competitor-twetch-releases-encrypted-chat-app/) to learn how it works at a technical level.
+Chat privately with end-to-end encrypted messaging. There is a one-time fee of $9.99 to initiate chats, but if someone else initiates the chat, it's free. There are no limits on number of chats or number of messages within a chat. It also has group chats. [Click here](https://www.zdnet.com/article/blockchain-based-twitter-competitor-twetch-releases-encrypted-chat-app/) to learn how it works at a technical level.
+
+### Market 📈
+
+Twetch Market is a place to buy and sell Bitcoin [NFTs](https://en.wikipedia.org/wiki/Non-fungible_token). Currently, it only supports NFTs that have been airdropped by the Twetch team.
 
 ## What's the catch?
 
-Twetch has a small community compared to Twitter's gargantuan 150,000,000 users. As of April 2021, Twetch has 46,000+ users.
+There is no "catch", but there are some downsides:
 
-The UI is quite good but not as refined as Twitter's.
-
-You won't find many popular accounts to follow, but you can create a [Windbell](https://windbell.app/) to duplicate any public Twitter account onto Twetch (and earn a 21.8% revenue share from all engagement with the Twetch account). For example I created the [Tim Ferriss Bot](https://twetch.app/u/17108).
-
-There is no native Lists functionality, but you can create a [Windbell Mix](https://windbell.app/mix/) to replicate that feature.
-
-In short, there's no catch, but the ecosystem is not as developed as Twitter's.
+- Twetch has a small community compared to Twitter's gargantuan 150,000,000 users. As of April 2021, Twetch has 46,000+ users.
+- The UI is decent but not nearly as zippy as Twitter.
+- You won't find many popular accounts to follow, but you can create a [Windbell](https://windbell.app/) to duplicate any public Twitter account onto Twetch (and earn a 21.8% revenue share from all engagement with the Twetch account). By doing this, archiving that user's tweetsFor example I created the [Tim Ferriss Bot](https://twetch.app/u/17108).
+- Much of the discussion on the site is about Bitcoin and cryptocurrency, but I expect that to change as the site attracts more people. For example there lots of artists who share their paintings / digital art.
+- There is no native Lists functionality to organize your feed, but you can create a [Windbell Mix](https://windbell.app/mix/) to replicate that feature (although it is quite limited because as of now you can't update lists once they are created).
+- Keep in mind all your posts are recorded on an immutable blockchain (this can be a good or bad thing depending on the situation!)
 
 ## What's the verdict?
 
-My humble opinion is that Twitter users should not expect to ditch it anytime soon. The community is much larger and diverse. There are people who don't want to pay to post. There are circumstances where you don't want a post to exist immutably on the blockchain. I don't see these things changing any time soon.
+Twitter users should not expect to ditch it anytime soon, but Twetch provides some utility that Twitter does not. Making money off each interaction is an innovative concept with a definite future in certain applications.
 
-On the flipside, Twetch provides some utility that Twitter does not. Making money off each interaction is an innovative concept with a definite future in certain applications. It really comes down to utilizing each platform for its unique communities and capabilities.
+It really comes down to utilizing each platform for its unique communities and capabilities.
 
-If Twetch sounds interesting to you, try it out for a bit and see if you like the community. Try to earn some money from your followers. Get indoctrinated by the memes:
+If Twetch sounds interesting to you, try it out. Try to earn some money from your followers. Get indoctrinated by the memes:
 
 ![Happy monkey after receiving 4 cents](./confused-chan-orange-meme.PNG)
 
-Just kidding about the last one. But if you want a glimpse at what the future of social media might look like, Twetch is definitely worth checking out!
+Just kidding about the last one. But if you want a glimpse at what the future of social media might look like, Twetch is definitely worth checking out.
 
 ## How to get started
 
@@ -115,22 +119,26 @@ You should see your Wallet Balance is no longer $0.00. Now you're ready to Twetc
 
 ### Follow some interesting accounts
 
-Here are a few of my favorites:
+Here are some of my favorites:
 
 - [remjx](https://twetch.app/u/4652) - Me!
 - [Cosmos Stagittarius a.k.a. Daniel Krawisz](https://twetch.app/u/24) - CEO of [Matterpool](https://matterpool.io/) and author of the excellent [Bitcoin Stuff](https://www.youtube.com/watch?v=a01XvAUc0Ic&list=PL_oaohwmog0OUlHgG24julyflhnXemM4G) YouTube series.
 - [T.K. Coleman](https://twetch.app/u/931) - Mood boosting entrepreneur
 - [Steve Patterson](https://twetch.app/u/4179) - Philosopher and bitcoin historian
 - [Jack C. Liu](https://twetch.app/u/255) - CEO of [RelayX](https://relayx.com)
+- [Elon Moist](https://twetch.app/u/4) - CEO of Twetch
+- [Zatoshi](https://twetch.app/u/7145) - BSV promoter and creator of [Mitto.cash](https://mitto.cash/) who gives away a lot of free BSV through contests
 
-### Use /commands to trigger actions in posts
+### Use /commands
 
-- `/pay @user $amount` to pay a user directly from your BSV wallet
-- `/trolltoll @user $amount` to prevent a user from interacting with you unless they pay the troll toll. `/trolltoll remove @user` to remove it. This is basically a way to "block" people on Twetch.
+There are built in commands that you can use as part of any post:
+
+- Post `/pay @user $amount` to pay a user directly from your BSV wallet to theirs
+- Post `/trolltoll @user $amount` to prevent a user from interacting with you unless they pay the troll toll. Post `/trolltoll remove @user` to remove it. This is basically a way to "block" people on Twetch.
 
 ### Write any Twitter post to the BSV blockchain
 
-On Twitter, reply `@twetchdat` to any post, and the twetchdat bot will convert it into a Twetch post. [For example](https://twitter.com/remjxd/status/1320228429564870656),
+On Twitter, reply `@twetchdat` to any post, and the twetchdat bot will convert it into a Twetch post which effectively archives it on Bitcoin. [For example](https://twitter.com/remjxd/status/1320228429564870656),
 ![Twetchdat example](./twetchdat-example.png)
 
 ## Developer API
@@ -146,3 +154,7 @@ If you still have questions, [PXL-3000](https://twetch.app/u/16322) created a [T
 Feel free to reach out to me on <a href={links.myTwitterUrl}>Twitter</a> or <a href={links.myTwetchUrl}>Twetch</a> for any comments, questions, or corrections on this article.
 
 Thanks, and Welcome to Decentralized Social Media! 🚀
+
+### Note
+
+This post was originally published in October 2020. I will try to keep it up to date as things change so it will still be a useful guide for new users.

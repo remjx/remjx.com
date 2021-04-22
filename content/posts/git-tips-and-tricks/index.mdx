@@ -1,0 +1,12 @@
+---
+title: Git tips & tricks
+date: 2021-04-20
+tags:
+  - Programming
+---
+
+This post contains links I've found helpful when working with [Git](https://git-scm.com/) version control.
+
+- [Branching standards & conventions](https://gist.github.com/digitaljhelms/4287848) by [@digitaljhelms](https://github.com/digitaljhelms). Advocates for a `stable` and `master` being the only two persistent branches. `feature/`s and `bug/`s branch from & get merged back to `master`. `hotfix/`s branch from `stable` and get merged back into `stable` and `master`.
+- [How to reference composite GitHub actions from within the same repo](https://github.com/jeffeb3/hello-world-composite-run-steps-action) by [@jeffeb3](https://github.com/jeffeb3). This allows you template-ize actions run within a single repo if the action doesn't need to be available outside of it.
+- [A million ways to get the local npm package version from within github actions](https://gist.github.com/DarrenN/8c6a5b969481725a4413). If you need to get a remote version from a package registry, `npm view [package] [attribute]` does the trick.
